@@ -1,0 +1,25 @@
+{
+  "schema": "nova.mercatus.launch_templates.v1",
+  "templates": [
+    {
+      "id": "developer-platform",
+      "name": "Developer Platform Launch",
+      "sections": ["problem", "solution", "developer workflow", "proof", "pricing", "onboarding", "support", "go-live"],
+      "default_audience": "builders, agencies, and technical teams"
+    },
+    {
+      "id": "business-automation",
+      "name": "Business Automation Launch",
+      "sections": ["customer pain", "workflow before", "workflow after", "implementation", "ROI", "pricing", "case study", "go-live"],
+      "default_audience": "business owners and operators"
+    },
+    {
+      "id": "marketplace-clone",
+      "name": "Marketplace Clone Launch",
+      "sections": ["clone summary", "brand setup", "content setup", "features", "updates", "pricing", "go-live"],
+      "default_audience": "creators launching app templates"
+    }
+  ],
+  "onboarding_steps": ["Brand", "Content", "Features", "Updates", "Go Live", "Customer Success"],
+  "pricing_formula": "recommended_price = base_value * complexity_multiplier * proof_multiplier + support_premium"
+}
