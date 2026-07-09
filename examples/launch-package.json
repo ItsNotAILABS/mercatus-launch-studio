@@ -1,0 +1,14 @@
+{
+  "template_id": "marketplace-clone",
+  "product": {
+    "name": "SpecForge Launch Studio",
+    "audience": "builders and teams preparing app specs for launch",
+    "one_line_offer": "Design professional app specifications with click-only choices and export launch-ready packages."
+  },
+  "pricing": {
+    "base_value": 7500,
+    "complexity_multiplier": 1.35,
+    "proof_multiplier": 1.2,
+    "support_premium": 1200
+  }
+}
