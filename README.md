@@ -5,24 +5,32 @@
 ![Python](https://img.shields.io/badge/python-stdlib%20server-3776ab)
 ![Pricing](https://img.shields.io/badge/pricing-advisor-2f9e44)
 ![Onboarding](https://img.shields.io/badge/onboarding-6%20steps-0b7285)
+![CI](https://img.shields.io/badge/CI-smoke%20%2B%20benchmarks-success)
+
+![Mercatus Launch Studio](assets/mercatus-launch-studio.svg)
 
 Launch studio for product pages, pricing advisors, onboarding flows, creator profiles, and customer-safe outreach guardrails.
 
 Mercatus turns a product manifest into a launch package: positioning, onboarding, pricing, proof gates, and go-live checklist.
 
-## Quick Start
+## Human Flow
 
-Validate templates:
+1. Pick a launch template.
+2. Generate a launch package.
+3. Review pricing assumptions.
+4. Confirm proof gates and go-live checklist.
+5. Export into README, website, PDF, or sales material only after claim review.
+
+See `docs/HUMAN_AI_WORKFLOWS.md` for human and AI worker flows.
+
+## Quick Start
 
 ```bash
 python tools/mercatusctl.py validate
-```
-
-List launch templates and price a package:
-
-```bash
 python tools/mercatusctl.py templates
 python tools/mercatusctl.py price --base-value 7500 --complexity-multiplier 1.35 --proof-multiplier 1.2 --support-premium 1200
+python tests/smoke_test.py
+python benchmarks/benchmark_launch_packages.py
 ```
 
 Run the API:
@@ -48,6 +56,10 @@ curl -s -X POST http://127.0.0.1:8780/launch-packages -H 'content-type: applicat
 | API server | `server/mercatus_launch_studio.py` |
 | CLI | `tools/mercatusctl.py` |
 | Example package request | `examples/launch-package.json` |
+| Smoke tests | `tests/smoke_test.py` |
+| Benchmarks | `benchmarks/benchmark_launch_packages.py` |
+| CI | `.github/workflows/ci.yml` |
+| Workflows | `docs/HUMAN_AI_WORKFLOWS.md` |
 
 ## Pricing Formula
 
@@ -59,12 +71,7 @@ The formula is advisory, not automatic billing. Every price recommendation requi
 
 ## Six-Step Launch Onboarding
 
-1. Brand
-2. Content
-3. Features
-4. Updates
-5. Go Live
-6. Customer Success
+Brand, Content, Features, Updates, Go Live, Customer Success.
 
 ## Operating Law
 
@@ -84,3 +91,4 @@ AI launch studio, product launch automation, pricing advisor, app marketplace la
 - Add Markdown/PDF export.
 - Connect to SpecForge project specs.
 - Add dashboard UI.
+- Add CI status badges after first workflow run.
