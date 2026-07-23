@@ -1,0 +1,27 @@
+{
+  "schema": "nova.mercatus_launch_studio.manifest.v1",
+  "name": "Mercatus Launch Studio",
+  "authority": "ItsNotAILABS / NOVA",
+  "role": "Launch studio for product pages, pricing advisors, onboarding flows, creator profiles, and outreach guardrails.",
+  "surfaces": [
+    "launch package generator",
+    "pricing advisor",
+    "creator profile builder",
+    "post-clone onboarding flow",
+    "go-live checklist",
+    "customer-safe outreach guardrails"
+  ],
+  "proof_gates": [
+    "claim check",
+    "price formula inputs captured",
+    "audience fit noted",
+    "compliance note present",
+    "go-live checklist generated"
+  ],
+  "next_gates": [
+    "add dashboard UI",
+    "persist launch packages",
+    "add export formats",
+    "connect to SpecForge project specs"
+  ]
+}
